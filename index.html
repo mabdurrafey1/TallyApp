@@ -3,7 +3,7 @@
 <meta name=description content="Keep Instagram, TikTok and YouTube. Lose Reels, Shorts and the endless feed. Join the ScrollFree waitlist.">
 <meta property=og:title content="ScrollFree – Instagram without Reels"><meta property=og:description content="Keep your apps. Lose the scroll. Join the waitlist."><meta property=og:image content="img/s-1-today.jpg">
 <meta name=theme-color content="#000">
-<link rel=icon href=img/icon.png><link rel=stylesheet href=landing.css></head><body>
+<link rel=icon href=img/icon.png><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap"><link rel=stylesheet href=landing.css></head><body>
 
 <nav class=wrap><a class=brand href=./><img src=img/icon.png alt="" width=28 height=28>ScrollFree</a><a class=navcta href=#join>Join waitlist</a></nav>
 
@@ -27,27 +27,75 @@
 <label><span><b>Hide Reels</b><small>Removes the Reels tab. No swiping into videos.</small></span><input type=checkbox data-hide=reels><i></i></label>
 <label><span><b>Hide suggested posts</b><small>Only people you follow.</small></span><input type=checkbox data-hide=sugg><i></i></label>
 <label><span><b>Hide ads</b><small>No sponsored posts.</small></span><input type=checkbox data-hide=ad><i></i></label>
-<label><span><b>Hide Explore</b><small>Search stays, the grid goes.</small></span><input type=checkbox data-hide=explore><i></i></label>
 </div>
-<p class=note style="margin-left:0">Same idea for YouTube Shorts, TikTok For You, Facebook Reels and Reddit Popular.</p>
+<p class=note style="margin-left:0">Same idea for TikTok For You, Facebook Reels and Reddit Popular.</p>
 </div>
 <div class=stage><div class="mock" id=mock>
-<div class=bar><b>Instagram</b><span>♡ &nbsp;✉︎</span></div>
-<div class=stories><i></i><i></i><i></i><i></i><i></i></div>
-<div class=feed>
-<article class=post><header><i></i><b>maya.k</b></header><div class="img g1"></div><p>Sunday at the lake</p></article>
-<article class="post x" data-k=sugg><header><i></i><b>viral.clips</b><em>Suggested for you</em></header><div class="img g2"></div></article>
-<article class="post x" data-k=ad><header><i></i><b>shopnow</b><em>Sponsored</em></header><div class="img g3"></div></article>
-<article class=post><header><i></i><b>sam.r</b></header><div class="img g4"></div><p>New flat, finally</p></article>
+<div class=sb><b>9:41</b><span><svg width=17 height=11 viewBox="0 0 17 11" fill=#fff><rect x=0 y=7 width=3 height=4 rx=1 /><rect x=4.5 y=5 width=3 height=6 rx=1 /><rect x=9 y=2.5 width=3 height=8.5 rx=1 /><rect x=13.5 y=0 width=3 height=11 rx=1 /></svg><svg width=25 height=12 viewBox="0 0 25 12"><rect x=.5 y=.5 width=21 height=11 rx=3.5 fill=none stroke=#fff opacity=.4 /><rect x=2 y=2 width=18 height=8 rx=2 fill=#fff /><rect x=23 y=4 width=1.5 height=4 rx=.7 fill=#fff opacity=.4 /></svg></span></div>
+<div class=scroll>
+<div class=ighead><svg viewBox="0 0 24 24" class=ic><path d="M12 5v14M5 12h14"/></svg><b class=wordmark>Instagram</b><svg viewBox="0 0 24 24" class=ic><path d="M12 20.5s-8-4.6-8-10.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 3.1c0 5.8-8 10.4-8 10.4z"/></svg></div>
+<div class=stories><figure class=me><i></i><figcaption>Your story</figcaption></figure><figure><i></i><figcaption>maya.k</figcaption></figure><figure><i></i><figcaption>sam.r</figcaption></figure><figure><i></i><figcaption>lena</figcaption></figure><figure><i></i><figcaption>omar.j</figcaption></figure></div>
+<article class=post><header><i></i><b>maya.k</b><span>•••</span></header><div class="img g1"></div><div class=acts><svg viewBox="0 0 24 24" class=ic><path d="M12 20.5s-8-4.6-8-10.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 3.1c0 5.8-8 10.4-8 10.4z"/></svg><svg viewBox="0 0 24 24" class=ic><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4A8 8 0 1 1 20 11.5z"/></svg><svg viewBox="0 0 24 24" class=ic><path d="M21 4 3 11l7 2.5L21 4l-7 17-4-7.5"/></svg><svg viewBox="0 0 24 24" class="ic r"><path d="M6 3h12v18l-6-4.5L6 21z"/></svg></div><p><b>maya.k</b> Sunday at the lake</p></article>
+<article class="post x" data-k=sugg><header><i></i><b>viral.clips</b><small>Suggested for you</small><span>•••</span></header><div class="img g2"><em>▶</em></div><div class=acts><svg viewBox="0 0 24 24" class=ic><path d="M12 20.5s-8-4.6-8-10.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 3.1c0 5.8-8 10.4-8 10.4z"/></svg></div><p><b>viral.clips</b> You won't believe #7</p></article>
+<article class="post x" data-k=ad><header><i></i><b>shopnow</b><small>Sponsored</small><span>•••</span></header><div class="img g3"></div><div class=shop>Shop now <span>›</span></div></article>
+<article class=post><header><i></i><b>sam.r</b><span>•••</span></header><div class="img g4"></div><div class=acts><svg viewBox="0 0 24 24" class=ic><path d="M12 20.5s-8-4.6-8-10.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 8 3.1c0 5.8-8 10.4-8 10.4z"/></svg></div><p><b>sam.r</b> New flat, finally</p></article>
 </div>
 <nav class=tabs>
-<span>⌂</span>
-<span class=x data-k=explore>⌕</span>
-<span>⊕</span>
-<span class="x reels" data-k=reels><svg viewBox="0 0 24 24" width=22 height=22 fill=none stroke=currentColor stroke-width=1.8><rect x=3 y=3 width=18 height=18 rx=5 /><path d="M3 8h18M8 3l3 5M14 3l3 5M10 12v5l4.5-2.5z"/></svg></span>
-<span>◯</span>
+<span class=on><svg viewBox="0 0 24 24" class=ic><path d="M4 10.5 12 4l8 6.5V20h-5v-6H9v6H4z" fill=currentColor /></svg></span>
+<span class=reels data-k=reels><svg viewBox="0 0 24 24" class=ic><rect x=3.5 y=3.5 width=17 height=17 rx=5 /><path d="M3.5 8.5h17M9 3.5l2.5 5M14.5 3.5l2.5 5M10.5 12.2v4.6l4-2.3z"/></svg></span>
+<span><svg viewBox="0 0 24 24" class=ic><path d="M21 4 3 11l7 2.5L21 4l-7 17-4-7.5"/></svg></span>
+<span><svg viewBox="0 0 24 24" class=ic><circle cx=11 cy=11 r=6.5 /><path d="m16 16 4 4"/></svg></span>
+<span><i class=pfp></i></span>
 </nav>
+<div class=home-ind></div>
 </div></div>
+</section>
+
+<section class="demo wrap yt" id=youtube>
+<div class=demo-copy>
+<p class=eyebrow>YouTube</p>
+<h2>Subscriptions, not Shorts.</h2>
+<p class=lead>Your channels, newest first. Pro turns YouTube into the app it should have been.</p>
+<div class=toggles>
+<label><span><b>Block Shorts</b><small>Everywhere. A Short link opens as a normal video.</small></span><input type=checkbox data-hide=shorts><i></i></label>
+<label><span><b>Block ads <em class=pro>PRO</em></b><small>In feeds and in videos.</small></span><input type=checkbox data-hide=yad><i></i></label>
+<label><span><b>Picture in Picture <em class=pro>PRO</em></b><small>Swipe home, keep watching.</small></span><input type=checkbox data-hide=pip><i></i></label>
+<label><span><b>Background play <em class=pro>PRO</em></b><small>Keeps playing with the screen locked.</small></span><input type=checkbox data-hide=bg><i></i></label>
+</div>
+</div>
+<div class=stage><div class=mock>
+<div class=sb><b>9:41</b><span>●●● ▮</span></div>
+<div class="scroll ytf">
+<div class=ythead><b class=ytlogo><i>▶</i>YouTube</b><span>⌕</span></div>
+<div class=player data-k=pip><div class="img g2"></div><p>Lecture 4: Linear algebra</p></div>
+<div class="post" data-k=yad><div class="img g3"><small class=adtag>Ad</small></div><p><b>Sponsored</b> · shopnow.com</p></div>
+<div class="post shelf" data-k=shorts><b>Shorts</b><div><i class=g1></i><i class=g4></i><i class=g2></i></div></div>
+<div class=post><div class="img g1"></div><p><b>Veritasium</b> · 2 hours ago</p></div>
+</div>
+<div class=bgplay data-k=bg>▶︎ Lecture 4 · playing in background</div>
+<nav class=tabs><span class=on>⌂</span><span class=reels data-k=shorts>▷</span><span>⊞</span><span><i class=pfp></i></span></nav>
+<div class=home-ind></div>
+</div></div>
+</section>
+
+<section class="pro-sec wrap" id=pro>
+<p class=eyebrow>ScrollFree Pro</p>
+<h2>Pay once. Pro for good.</h2>
+<p class=lead>No subscription, nothing to cancel. Free covers one app with presets. Pro unlocks everything.</p>
+<ul class=pro-grid>
+<li><b>Every app</b>Instagram, YouTube, TikTok, Facebook, Reddit, Snapchat.</li>
+<li><b>No ads</b>Instagram, Facebook and YouTube, in feeds and in videos.</li>
+<li><b>YouTube Background play</b>Lectures and podcasts with the screen locked.</li>
+<li><b>Picture in Picture</b>Keep a video up while you text.</li>
+<li><b>Strict Mode &amp; schedules</b>Bedtime and morning lock, daily limits per app.</li>
+<li><b>5 accounts per app</b>Personal and work, side by side.</li>
+<li><b>Messages only</b>Open Instagram straight to your DMs.</li>
+<li><b>All-time insights</b>See every hour you’ve won back.</li>
+</ul>
+<table class=cmp><tr><th></th><th>Free</th><th>Pro</th></tr>
+<tr><td>Apps</td><td>1</td><td>All 6</td></tr><tr><td>Feed filters</td><td>Presets</td><td>All</td></tr>
+<tr><td>Ad blocking, PiP, background play</td><td>—</td><td>✓</td></tr><tr><td>Strict Mode, schedules</td><td>—</td><td>✓</td></tr>
+<tr><td>Accounts per app</td><td>1</td><td>5</td></tr><tr><td>Insights</td><td>Today</td><td>All time</td></tr></table>
 </section>
 
 <section class="gone wrap">
@@ -73,7 +121,7 @@
 
 <script>
 for (const t of document.querySelectorAll("[data-hide]")) t.onchange = () =>
-  document.querySelectorAll(`#mock [data-k=${t.dataset.hide}]`).forEach(el => el.classList.toggle("gone-el", t.checked))
+  t.closest("section").querySelectorAll(`.mock [data-k=${t.dataset.hide}]`).forEach(el => el.classList.toggle("gone-el", t.checked))
 const FORM_URL = "" // waitlist endpoint, set once the form service is chosen
 for (const f of document.querySelectorAll(".wl")) f.onsubmit = async e => {
   e.preventDefault()
