@@ -19,11 +19,11 @@
 <figure class=phone><img src=img/s-1-today.jpg alt="ScrollFree Today screen showing time won back" width=1100 height=2392></figure>
 </header>
 
-<section class="demo wrap" id=try>
+<div class=scrolly><section class="demo wrap" id=try>
 <div class=demo-copy>
 <p class=eyebrow>Try it</p>
 <h2>You choose what goes.</h2>
-<p class=lead>These are the real controls you set up when you join. Flip one and watch it leave.</p>
+<p class=lead>These are the real controls you set up when you join. Keep scrolling and watch them leave.</p>
 <p class=note style="margin-left:0">Same idea for TikTok For You, Facebook Reels and Reddit Popular.</p>
 </div>
 <div class=stage><div class="mock" id=mock>
@@ -49,9 +49,9 @@
 <label><span><b>Hide suggested posts <em class=pro>PRO</em></b><small>Only people you follow.</small></span><input type=checkbox data-hide=sugg><i></i></label>
 <label><span><b>Hide ads <em class=pro>PRO</em></b><small>No sponsored posts.</small></span><input type=checkbox data-hide=ad><i></i></label>
 </div></div>
-</section>
+</section></div>
 
-<section class="demo wrap yt" id=youtube>
+<div class=scrolly><section class="demo wrap yt" id=youtube>
 <div class=demo-copy>
 <p class=eyebrow>YouTube</p>
 <h2>Subscriptions, not Shorts.</h2>
@@ -70,7 +70,7 @@
 <label><span><b>Picture in Picture <em class=pro>PRO</em></b><small>Swipe home, keep watching.</small></span><input type=checkbox data-hide=pip><i></i></label>
 <label><span><b>Background play <em class=pro>PRO</em></b><small>Keeps playing with the screen locked.</small></span><input type=checkbox data-hide=bg><i></i></label>
 </div></div>
-</section>
+</section></div>
 
 <section class="pro-sec wrap" id=pro>
 <p class=eyebrow>ScrollFree Pro</p>
@@ -138,6 +138,16 @@ for (const t of document.querySelectorAll("[data-hide]")) t.onchange = () => {
   if (!post) return go()
   sc.scrollTo({top: post.offsetTop - 60, behavior: "smooth"}); setTimeout(go, 500)
 }
+// Scrolling through a demo flips its toggles one by one; scrolling back flips them off.
+const scrollies = [...document.querySelectorAll(".scrolly")]
+const onScroll = () => scrollies.forEach(w => {
+  const r = w.getBoundingClientRect(), p = -r.top / Math.max(r.height - innerHeight, r.height * .5)
+  w.querySelectorAll("[data-hide]").forEach((t, i, all) => {
+    const on = p > (i + 1) / (all.length + 1)
+    if (t._on !== on) { t._on = on; if (t.checked !== on) { t.checked = on; t.onchange() } }
+  })
+})
+addEventListener("scroll", onScroll, {passive: true}); onScroll()
 const FORM_URL = "" // waitlist endpoint, set once the form service is chosen
 for (const f of document.querySelectorAll(".wl")) f.onsubmit = async e => {
   e.preventDefault()
