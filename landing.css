@@ -144,3 +144,12 @@ footer a{margin-left:20px}footer a:hover{color:#fff}
 .cmp th:last-child,.cmp td:last-child{color:#B7A9FF;font-weight:600}
 @media(max-width:820px){.pro-grid{grid-template-columns:1fr 1fr}.yt .demo-copy{order:0}}
 @media(max-width:480px){.pro-grid{grid-template-columns:1fr}}
+/* real photos */
+.img,.shelf i{background-size:cover!important;background-position:center!important}
+.g1{background:url(img/u-lake.jpg)}.g2{background:url(img/u-party.jpg)}.g3{background:url(img/u-watch.jpg)}.g4{background:url(img/u-flat.jpg)}
+.player .img{background:url(img/u-lecture.jpg)}.shelf i.g4{background:url(img/u-food.jpg)}
+.stories figure:nth-child(2) i,.post:nth-of-type(1) header i{background:url(img/u-a1.jpg) center/cover}
+.stories figure:nth-child(3) i,.post:nth-of-type(4) header i{background:url(img/u-a4.jpg) center/cover}
+.stories figure:nth-child(4) i{background:url(img/u-a3.jpg) center/cover}.stories figure:nth-child(5) i{background:url(img/u-a5.jpg) center/cover}
+.ytlogo{gap:5px}
+.sb{background:linear-gradient(#000 70%,transparent)}
