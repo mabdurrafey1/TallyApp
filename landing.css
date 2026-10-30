@@ -153,3 +153,24 @@ footer a{margin-left:20px}footer a:hover{color:#fff}
 .stories figure:nth-child(4) i{background:url(img/u-a3.jpg) center/cover}.stories figure:nth-child(5) i{background:url(img/u-a5.jpg) center/cover}
 .ytlogo{gap:5px}
 .sb{background:linear-gradient(#000 70%,transparent)}
+/* pop back in */
+.tabs .back{animation:popin .6s cubic-bezier(.3,1.4,.5,1) .15s both}
+@keyframes popin{0%{transform:translate3d(0,-120px,200px) rotateX(-40deg) scale(.3);opacity:0}60%{transform:translate3d(0,6px,0) scale(1.25);opacity:1}100%{transform:none}}
+/* YouTube app */
+.yti{display:flex;gap:16px}.yti .ic{width:22px;height:22px}
+.chips{display:flex;gap:8px;padding:0 12px 12px;overflow:hidden}.chips span{flex:none;padding:6px 11px;border-radius:8px;background:#272727;font-size:12px;font-weight:600}.chips .on{background:#fff;color:#000}
+.vid .img{height:172px!important;position:relative}
+.dur{position:absolute;right:8px;bottom:8px;background:rgba(0,0,0,.8);font-size:10.5px;font-weight:600;padding:1px 5px;border-radius:4px}
+.adtag{position:absolute;left:8px;bottom:8px;background:rgba(0,0,0,.8)!important;color:#fff!important;font-size:10.5px;padding:1px 6px}
+.vmeta{display:flex;gap:10px;padding:10px 12px 16px}.vmeta i{flex:none;width:34px;height:34px;border-radius:50%;background-size:cover}
+.vmeta p{margin:0!important;flex:1;font-size:13px;line-height:1.3}.vmeta b{display:block;font-weight:500}.vmeta span{display:block;color:#aaa;font-size:11px;margin-top:3px}
+.ic.dots{width:16px;height:16px;flex:none;stroke:none}
+.shopbtn{margin:-6px 12px 16px;padding:8px;border-radius:99px;background:#3ea6ff;color:#000;text-align:center;font-weight:600;font-size:12px}
+.player.gone-el .vmeta{padding:6px}.player.gone-el .vmeta i,.player.gone-el .dots,.player.gone-el .vmeta span{display:none}.player.gone-el .img{height:85px!important}.player.gone-el .vmeta b{font-size:10px}
+.shelf b{display:flex;align-items:center;gap:6px;font-size:15px}
+.shelf i{position:relative;height:210px!important;border-radius:10px}.shelf i span{position:absolute;left:8px;right:8px;bottom:8px;font-size:11.5px;font-weight:600;font-style:normal;text-shadow:0 1px 4px #000}.shelf i small{display:block;font-weight:400;color:#ddd}
+.g5{background:url(img/u-lecture.jpg)}.g6{background:url(img/u-food.jpg)}
+.av1{background:url(img/u-a4.jpg)}.av3{background:#fff}.av4{background:url(img/u-a3.jpg)}
+.tabs .plus .ic{width:30px;height:30px;stroke-width:1.3}
+/* small phones */
+@media(max-width:400px){.demo{padding:64px 16px}.mock{width:290px;height:600px;border-radius:48px}.post .img{height:290px}.wrap{padding-left:16px;padding-right:16px}h1{font-size:44px}.cmp{font-size:13px}.cmp td,.cmp th{padding:10px 8px}}
