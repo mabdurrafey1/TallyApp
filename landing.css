@@ -195,3 +195,5 @@ footer a{margin-left:20px}footer a:hover{color:#fff}
 .sticky{display:none}
 @media(max-width:820px){.sticky{display:block;position:fixed;z-index:20;left:16px;right:16px;bottom:max(16px,env(safe-area-inset-bottom));padding:15px;border-radius:99px;text-align:center;font-weight:700;color:#000;background:#fff;box-shadow:0 10px 30px rgba(0,0,0,.6),0 0 0 6px rgba(123,109,255,.25);text-decoration:none}footer{padding-bottom:90px}}
 .app-grid s{color:var(--t2);text-decoration-color:rgba(255,80,80,.7)}
+.ver{margin-left:auto;margin-right:10px;background:rgba(255,255,255,.06);color:#fff;border:1px solid var(--line);border-radius:99px;padding:7px 10px;font:inherit;font-size:13px;max-width:44vw}
+.clock[hidden]{display:none}

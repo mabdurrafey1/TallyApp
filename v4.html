@@ -6,11 +6,11 @@
 <link rel=icon href=img/icon.png><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap"><link rel=stylesheet href=landing.css></head><body>
 
 <div class=fomo>Waitlist price ends when the App Store launch begins. <a href=#join>Join →</a></div>
-<nav class=wrap><a class=brand href=./><img src=img/icon.png alt="" width=28 height=28>ScrollFree</a><a class=navcta href=#join>Join waitlist</a></nav>
+<nav class=wrap><a class=brand href=./><img src=img/icon.png alt="" width=28 height=28>ScrollFree</a><select class=ver aria-label="Page version" onchange="location=this.value"><option value="./">Original</option><option value="v1.html">1 · Founding price</option><option value="v2.html">2 · Early access</option><option value="v3.html">3 · Cost of waiting</option><option value="v4.html" selected>4 · Countdown</option><option value="v5.html">5 · Bring a friend</option></select><a class=navcta href=#join>Join waitlist</a></nav>
 
 <header class="hero wrap">
 <div>
-<p class=eyebrow>Launching on the App Store</p><h1>Reels end<br><em>in <span id=cd>soon</span>.</em></h1>
+<p class=eyebrow>Launching on the App Store</p><h1>Reels end<br><em><span id=cd>soon</span>.</em></h1>
 <p class=lead>Join before launch day to get Pro at the waitlist price. On launch day the price goes up.</p>
 <div class=clock aria-live=polite><span><b id=d>–</b>days</span><span><b id=h>–</b>hrs</span><span><b id=m>–</b>min</span><span><b id=s>–</b>sec</span></div>
 <form class=wl><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=4><button>Lock waitlist price</button></form><p class="note msg">One email on launch day. Unsubscribe anytime.</p>
@@ -96,7 +96,7 @@
 <section class="apps wrap" id=apps>
 <p class=eyebrow>Every app you lose time to</p>
 <h2>One app. Seven feeds, tamed.</h2>
-<ul class=app-grid><li><img src=img/app-instagram.png alt="" width=52 height=52 loading=lazy><b>Instagram</b><p><s>Reels, Explore, suggested posts, ads</s></p><p class=keep>Keeps LFriends, stories, DMs</p></li><li><img src=img/app-youtube.png alt="" width=52 height=52 loading=lazy><b>YouTube</b><p><s>Shorts, recommendations, autoplay, ads</s></p><p class=keep>Keeps LSubscriptions, search</p></li><li><img src=img/app-tiktok.png alt="" width=52 height=52 loading=lazy><b>TikTok</b><p><s>For You, LIVE, Shop, auto-scroll</s></p><p class=keep>Keeps LFollowing, messages</p></li><li><img src=img/app-facebook.png alt="" width=52 height=52 loading=lazy><b>Facebook</b><p><s>Reels, People You May Know, ads</s></p><p class=keep>Keeps LFriends, groups, Marketplace</p></li><li><img src=img/app-reddit.png alt="" width=52 height=52 loading=lazy><b>Reddit</b><p><s>Popular, All, promoted and suggested posts</s></p><p class=keep>Keeps LYour communities, sorted by New</p></li><li><img src=img/app-snapchat.png alt="" width=52 height=52 loading=lazy><b>Snapchat</b><p><s>Spotlight, Discover, Quick Add</s></p><p class=keep>Keeps LChats and snaps</p></li><li><img src=img/app-x.png alt="" width=52 height=52 loading=lazy><b>X</b><p><s>For You timeline, Grok, Explore</s></p><p class=keep>Keeps LSearch, messages</p></li></ul>
+<ul class=app-grid><li><img src=img/app-instagram.png alt="" width=52 height=52 loading=lazy><b>Instagram</b><p><s>Reels, Explore, suggested posts, ads</s></p><p class=keep>Keeps friends, stories, DMs</p></li><li><img src=img/app-youtube.png alt="" width=52 height=52 loading=lazy><b>YouTube</b><p><s>Shorts, recommendations, autoplay, ads</s></p><p class=keep>Keeps subscriptions, search</p></li><li><img src=img/app-tiktok.png alt="" width=52 height=52 loading=lazy><b>TikTok</b><p><s>For You, LIVE, Shop, auto-scroll</s></p><p class=keep>Keeps following, messages</p></li><li><img src=img/app-facebook.png alt="" width=52 height=52 loading=lazy><b>Facebook</b><p><s>Reels, People You May Know, ads</s></p><p class=keep>Keeps friends, groups, Marketplace</p></li><li><img src=img/app-reddit.png alt="" width=52 height=52 loading=lazy><b>Reddit</b><p><s>Popular, All, promoted and suggested posts</s></p><p class=keep>Keeps your communities, sorted by New</p></li><li><img src=img/app-snapchat.png alt="" width=52 height=52 loading=lazy><b>Snapchat</b><p><s>Spotlight, Discover, Quick Add</s></p><p class=keep>Keeps chats and snaps</p></li><li><img src=img/app-x.png alt="" width=52 height=52 loading=lazy><b>X</b><p><s>For You timeline, Grok, Explore</s></p><p class=keep>Keeps search, messages</p></li></ul>
 </section>
 
 <section class="gone wrap">
@@ -152,4 +152,4 @@ for (const f of document.querySelectorAll(".wl")) f.onsubmit = async e => {
 </script>
 <a class=sticky href=#join>Lock waitlist price</a>
 <script>const LAUNCH=""; /* ISO date, e.g. "2026-12-01T09:00:00-05:00" */
-if(LAUNCH){const tick=()=>{let t=Math.max(0,new Date(LAUNCH)-Date.now())/1000;const D=Math.floor(t/86400);d.textContent=D;h.textContent=Math.floor(t%86400/3600);m.textContent=Math.floor(t%3600/60);s.textContent=Math.floor(t%60);cd.textContent=D+" days"};tick();setInterval(tick,1000)}else document.querySelector(".clock").hidden=true</script></body></html>
+if(LAUNCH){const tick=()=>{let t=Math.max(0,new Date(LAUNCH)-Date.now())/1000;const D=Math.floor(t/86400);d.textContent=D;h.textContent=Math.floor(t%86400/3600);m.textContent=Math.floor(t%3600/60);s.textContent=Math.floor(t%60);cd.textContent="in "+D+" days"};tick();setInterval(tick,1000)}else document.querySelector(".clock").hidden=true</script></body></html>
