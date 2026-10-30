@@ -257,3 +257,9 @@ footer a{margin-left:20px}footer a:hover{color:#fff}
 .ig .acts{gap:5px;align-items:center;padding:10px 12px 8px}.ig .acts em{font:600 13px system-ui;margin-right:12px}.ig .acts .ic{width:25px;height:25px;stroke-width:1.7}
 .ig .post p{margin:0 12px 3px}.ig .post .dim,.ig .post .t{color:rgba(255,255,255,.55)}.ig .post .t{font-size:11px;margin-bottom:16px}
 .ig .home-ind{z-index:4}
+.track .mock{text-align:left}
+.snaphead{gap:14px}.snaphead .pfp{width:34px;height:34px}.snaphead b{text-align:center}
+.srow{border:0;padding:9px 16px}.srow p{flex:1}.srow .ic{width:22px;height:22px;opacity:.55}
+.srow span{display:flex;align-items:center;gap:5px}.srow .r{color:#f23c57;font-weight:600}
+.ss{display:inline-block;width:11px;height:11px;border:2px solid var(--c);border-radius:2px}.ss.f{background:var(--c)}
+.ss.a{width:0;height:0;border:0;border-left:11px solid var(--c);border-top:6px solid transparent;border-bottom:6px solid transparent;border-radius:0}
