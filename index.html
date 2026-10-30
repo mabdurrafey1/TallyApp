@@ -1,2 +1,54 @@
-<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>ScrollFree</title><link rel=stylesheet href=style.css></head><body><main><nav><a href=./>ScrollFree</a><a href=privacy.html>Privacy</a><a href=terms.html>Terms</a><a href=help.html>Help</a></nav>
-<h1>ScrollFree</h1><p>Your social apps. Without the feed.</p><p>ScrollFree opens the social apps you use with the feeds, Shorts and Reels switched off, and helps you set limits, schedules and pauses.</p><p>Contact: <a href="mailto:appledeveloper545@gmail.com">appledeveloper545@gmail.com</a></p></main></body></html>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'>
+<title>ScrollFree – Instagram without Reels</title>
+<meta name=description content="Keep Instagram, TikTok and YouTube. Lose Reels, Shorts and the endless feed. Join the ScrollFree waitlist.">
+<meta property=og:title content="ScrollFree – Instagram without Reels"><meta property=og:description content="Keep your apps. Lose the scroll. Join the waitlist."><meta property=og:image content="img/s-1-today.jpg">
+<meta name=theme-color content="#000">
+<link rel=icon href=img/icon.png><link rel=stylesheet href=landing.css></head><body>
+
+<nav class=wrap><a class=brand href=./><img src=img/icon.png alt="" width=28 height=28>ScrollFree</a><a class=navcta href=#join>Join waitlist</a></nav>
+
+<header class="hero wrap">
+<div>
+<p class=eyebrow>Coming soon to iPhone</p>
+<h1>Instagram,<br><em>without Reels.</em></h1>
+<p class=lead>Keep your friends, messages and the people you follow. ScrollFree takes out Reels, Shorts, suggested posts and the endless feed.</p>
+<form class=wl><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><button>Join the waitlist</button></form>
+<p class="note msg">Free to join. One email when we launch.</p>
+</div>
+<figure class=phone><img src=img/s-1-today.jpg alt="ScrollFree Today screen showing time won back" width=1100 height=2392></figure>
+</header>
+
+<section class="gone wrap">
+<p class=eyebrow>What disappears</p>
+<ul><li>Reels</li><li>Shorts</li><li>Explore</li><li>Suggested posts</li><li>Sponsored posts</li><li>Autoplay</li><li>The endless feed</li></ul>
+<p class=lead>What stays: your DMs, your friends’ posts and stories, search, and your own profile.</p>
+</section>
+
+<section class="feat wrap">
+<article><figure class=phone><img src=img/s-3-shields.jpg alt="Shields screen" loading=lazy width=1100 height=2392></figure>
+<h2>Shields that hold</h2><p>Block an app’s feed outright, or add a pause before it opens. No swiping your way back in.</p></article>
+<article><figure class=phone><img src=img/s-4-insights.jpg alt="Instagram inside ScrollFree, with no Reels tab" loading=lazy width=1100 height=2392></figure>
+<h2>Instagram, the good part</h2><p>Stories, messages and the people you follow. The Reels tab simply isn’t there.</p></article>
+</section>
+
+<section id=join class="cta wrap">
+<h2>Use your apps. Skip the feed.</h2>
+<form class=wl><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><button>Join the waitlist</button></form>
+<p class="note msg">Free to join. One email when we launch.</p>
+</section>
+
+<footer class=wrap><span>© ScrollFree</span><span><a href=privacy.html>Privacy</a><a href=terms.html>Terms</a><a href=help.html>Help</a><a href="mailto:appledeveloper545@gmail.com">Contact</a></span></footer>
+
+<script>
+const FORM_URL = "" // waitlist endpoint, set once the form service is chosen
+for (const f of document.querySelectorAll(".wl")) f.onsubmit = async e => {
+  e.preventDefault()
+  const b = f.querySelector("button"), m = f.nextElementSibling; b.disabled = true
+  try {
+    const r = await fetch(FORM_URL, {method: "POST", headers: {Accept: "application/json"}, body: new FormData(f)})
+    if (!r.ok) throw 0
+    f.hidden = true; m.textContent = "You’re on the list. We’ll email you on launch day."
+  } catch { m.textContent = "Couldn’t join just now. Try again."; b.disabled = false }
+}
+</script>
+</body></html>
