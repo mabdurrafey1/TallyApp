@@ -14,7 +14,7 @@
 <p class=lead>That’s how much of your waking life <output id=mins>143</output> minutes a day adds up to over 50 years. Slide to your own number.</p>
 <input type=range id=slide min=30 max=360 value=143 aria-label="Minutes per day">
 <p class="note">Average daily social media use is 2 h 23 min (DataReportal, 2024).</p>
-<form class=wl><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=3><button>Get my years back</button></form><p class="note msg">Free to join. One email when we launch.</p>
+<form class=wl name=waitlist data-netlify=true><input type=hidden name=form-name value=waitlist><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=3><button>Get my years back</button></form><p class="note msg">Free to join. One email when we launch.</p>
 </div>
 <figure class=phone><img src=img/s-1-today.jpg alt="ScrollFree Today screen showing time won back" width=1100 height=2392></figure>
 </header>
@@ -133,7 +133,7 @@
 
 <section id=join class="cta wrap">
 <h2>Use your apps. Skip the feed.</h2>
-<form class=wl><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=3><button>Get my years back</button></form>
+<form class=wl name=waitlist data-netlify=true><input type=hidden name=form-name value=waitlist><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=3><button>Get my years back</button></form>
 <p class="note msg">Free to join. One email when we launch.</p>
 </section>
 
@@ -165,12 +165,11 @@ const onRail = () => rails.forEach(w => {
   t.style.transform = `translateX(${-p * Math.max(0, t.scrollWidth - innerWidth)}px)`
 })
 addEventListener("scroll", onRail, {passive: true}); addEventListener("resize", onRail); onRail()
-const FORM_URL = "" // waitlist endpoint, set once the form service is chosen
 for (const f of document.querySelectorAll(".wl")) f.onsubmit = async e => {
   e.preventDefault()
   const b = f.querySelector("button"), m = f.nextElementSibling; b.disabled = true
   try {
-    const r = await fetch(FORM_URL, {method: "POST", headers: {Accept: "application/json"}, body: new FormData(f)})
+    const r = await fetch("/", {method: "POST", headers: {"Content-Type": "application/x-www-form-urlencoded"}, body: new URLSearchParams(new FormData(f))})
     if (!r.ok) throw 0
     f.hidden = true; m.textContent = "You’re on the list. We’ll email you on launch day."
   } catch { m.textContent = "Couldn’t join just now. Try again."; b.disabled = false }

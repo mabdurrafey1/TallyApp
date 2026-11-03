@@ -12,7 +12,7 @@
 <div>
 <p class=eyebrow>Early access</p><h1>Get in<br><em>before everyone.</em></h1>
 <p class=lead>ScrollFree opens in waves. Wave 1 gets the TestFlight beta weeks before the App Store.</p>
-<form class=wl><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=2><button>Save my spot</button></form><p class="note msg">Your place is saved the moment you join.</p>
+<form class=wl name=waitlist data-netlify=true><input type=hidden name=form-name value=waitlist><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=2><button>Save my spot</button></form><p class="note msg">Your place is saved the moment you join.</p>
 <ol class=waves><li class=now><b>Wave 1</b>TestFlight beta<span>Open now</span></li><li><b>Wave 2</b>Early App Store access</li><li><b>Everyone</b>Public launch</li></ol>
 </div>
 <figure class=phone><img src=img/s-1-today.jpg alt="ScrollFree Today screen showing time won back" width=1100 height=2392></figure>
@@ -132,7 +132,7 @@
 
 <section id=join class="cta wrap">
 <h2>Use your apps. Skip the feed.</h2>
-<form class=wl><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=2><button>Save my spot</button></form>
+<form class=wl name=waitlist data-netlify=true><input type=hidden name=form-name value=waitlist><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=2><button>Save my spot</button></form>
 <p class="note msg">Free to join. One email when we launch.</p>
 </section>
 
@@ -164,12 +164,11 @@ const onRail = () => rails.forEach(w => {
   t.style.transform = `translateX(${-p * Math.max(0, t.scrollWidth - innerWidth)}px)`
 })
 addEventListener("scroll", onRail, {passive: true}); addEventListener("resize", onRail); onRail()
-const FORM_URL = "" // waitlist endpoint, set once the form service is chosen
 for (const f of document.querySelectorAll(".wl")) f.onsubmit = async e => {
   e.preventDefault()
   const b = f.querySelector("button"), m = f.nextElementSibling; b.disabled = true
   try {
-    const r = await fetch(FORM_URL, {method: "POST", headers: {Accept: "application/json"}, body: new FormData(f)})
+    const r = await fetch("/", {method: "POST", headers: {"Content-Type": "application/x-www-form-urlencoded"}, body: new URLSearchParams(new FormData(f))})
     if (!r.ok) throw 0
     f.hidden = true; m.textContent = "You’re on the list. We’ll email you on launch day."
   } catch { m.textContent = "Couldn’t join just now. Try again."; b.disabled = false }

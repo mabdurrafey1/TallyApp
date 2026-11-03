@@ -12,7 +12,7 @@
 <div>
 <p class=eyebrow>Quit together</p><h1>Reels will still be there.<br><em>Your evenings won’t.</em></h1>
 <p class=lead>Join, then share your link. Get 3 friends on the list and Pro is yours free at launch.</p>
-<form class=wl><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=5><button>Join and get my link</button></form><p class="note msg">You’ll get your invite link right after joining.</p>
+<form class=wl name=waitlist data-netlify=true><input type=hidden name=form-name value=waitlist><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=5><button>Join and get my link</button></form><p class="note msg">You’ll get your invite link right after joining.</p>
 <div class=steps><span><b>1</b>Join</span><span><b>2</b>Share your link</span><span><b>3</b>3 friends join, Pro is free</span></div>
 </div>
 <figure class=phone><img src=img/s-1-today.jpg alt="ScrollFree Today screen showing time won back" width=1100 height=2392></figure>
@@ -132,7 +132,7 @@
 
 <section id=join class="cta wrap">
 <h2>Use your apps. Skip the feed.</h2>
-<form class=wl><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=5><button>Join and get my link</button></form>
+<form class=wl name=waitlist data-netlify=true><input type=hidden name=form-name value=waitlist><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><input type=hidden name=variant value=5><button>Join and get my link</button></form>
 <p class="note msg">Free to join. One email when we launch.</p>
 </section>
 
@@ -164,12 +164,11 @@ const onRail = () => rails.forEach(w => {
   t.style.transform = `translateX(${-p * Math.max(0, t.scrollWidth - innerWidth)}px)`
 })
 addEventListener("scroll", onRail, {passive: true}); addEventListener("resize", onRail); onRail()
-const FORM_URL = "" // waitlist endpoint, set once the form service is chosen
 for (const f of document.querySelectorAll(".wl")) f.onsubmit = async e => {
   e.preventDefault()
   const b = f.querySelector("button"), m = f.nextElementSibling; b.disabled = true
   try {
-    const r = await fetch(FORM_URL, {method: "POST", headers: {Accept: "application/json"}, body: new FormData(f)})
+    const r = await fetch("/", {method: "POST", headers: {"Content-Type": "application/x-www-form-urlencoded"}, body: new URLSearchParams(new FormData(f))})
     if (!r.ok) throw 0
     f.hidden = true; m.textContent = "You’re on the list. We’ll email you on launch day."
   } catch { m.textContent = "Couldn’t join just now. Try again."; b.disabled = false }
