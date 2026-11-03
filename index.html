@@ -1,19 +1,19 @@
 <!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'>
-<title>ScrollFree – Instagram without Reels</title>
+<title>ScrollFree – Instagram without Reels</title><meta name=robots content=noindex>
 <meta name=description content="Keep Instagram, TikTok and YouTube. Lose Reels, Shorts and the endless feed. Join the ScrollFree waitlist.">
 <meta property=og:title content="ScrollFree – Instagram without Reels"><meta property=og:description content="Keep your apps. Lose the scroll. Join the waitlist."><meta property=og:image content="img/s-1-today.jpg">
 <meta name=theme-color content="#000">
 <link rel=icon href=img/icon.png><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link rel=stylesheet href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap"><link rel=stylesheet href=landing.css></head><body>
 
-<nav class=wrap><a class=brand href=./><img src=img/icon.png alt="" width=28 height=28>ScrollFree</a><select class=ver aria-label="Page version" onchange="location=this.value"><option value="./" selected>Original</option><option value="v1.html">1 · Founding price</option><option value="v2.html">2 · Early access</option><option value="v3.html">3 · Cost of waiting</option><option value="v4.html">4 · Countdown</option><option value="v5.html">5 · Bring a friend</option><option value="v6.html">6 · The story</option></select><a class=navcta href=#join>Join waitlist</a></nav>
+<div class=fomo>Founding members get Pro at 50% off. First 1,000 on the list only. <a href=#join>Join →</a></div>
+<nav class=wrap><a class=brand href=./><img src=img/icon.png alt="" width=28 height=28>ScrollFree</a><a class=navcta href=#join>Join waitlist</a></nav>
 
 <header class="hero wrap">
 <div>
-<p class=eyebrow>Coming soon to iPhone</p>
-<h1>Instagram,<br><em>without Reels.</em></h1>
-<p class=lead>Keep your friends, messages and the people you follow. ScrollFree takes out Reels, Shorts, suggested posts and the endless feed.</p>
-<form class=wl name=waitlist data-netlify=true><input type=hidden name=form-name value=waitlist><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><button>Join the waitlist</button></form>
-<p class="note msg">Free to join. One email when we launch.</p>
+<p class=eyebrow>Founding member offer</p><h1>Instagram,<br><em>without Reels.</em></h1>
+<p class=lead>The first 1,000 people on the list lock in Pro at half price, for good. After that it’s full price.</p>
+<form class=wl name=waitlist data-netlify=true><input type=hidden name=form-name value=waitlist><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><button>Claim founding price</button></form><p class="note msg">One email at launch with your founding code. No spam.</p>
+<ul class=perks><li>50% off Pro, forever</li><li>Founding member badge</li><li>Vote on the next app we tame</li></ul>
 </div>
 <figure class=phone><img src=img/s-1-today.jpg alt="ScrollFree Today screen showing time won back" width=1100 height=2392></figure>
 </header>
@@ -132,7 +132,7 @@
 
 <section id=join class="cta wrap">
 <h2>Use your apps. Skip the feed.</h2>
-<form class=wl name=waitlist data-netlify=true><input type=hidden name=form-name value=waitlist><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><button>Join the waitlist</button></form>
+<form class=wl name=waitlist data-netlify=true><input type=hidden name=form-name value=waitlist><input type=email name=email required placeholder="Your email" autocomplete=email aria-label="Email"><button>Claim founding price</button></form>
 <p class="note msg">Free to join. One email when we launch.</p>
 </section>
 
@@ -174,4 +174,5 @@ for (const f of document.querySelectorAll(".wl")) f.onsubmit = async e => {
   } catch { m.textContent = "Couldn’t join just now. Try again."; b.disabled = false }
 }
 </script>
+<a class=sticky href=#join>Claim founding price</a>
 </body></html>
